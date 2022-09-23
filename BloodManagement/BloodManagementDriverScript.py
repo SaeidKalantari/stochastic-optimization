@@ -465,7 +465,7 @@ def Main():
             print("Reseting random seed!")
             np.random.seed(params['SEED_TESTING'])
             
-        t_init = time.clock()
+        t_init = time.process_time()
         print('Iteration = ', iteration)
         
         # Initial inventory
@@ -546,7 +546,7 @@ def Main():
         
           
 
-        t_end = time.clock()
+        t_end = time.process_time()
         recordSimu = (iteration,int(t_end-t_init),alpha,obj[iteration],(iteration<params['NUM_TRAINNING_ITER']))
         simuList.append(recordSimu)
        
